@@ -1,0 +1,153 @@
+.perf-page { width: 100%; }
+
+.perf-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 0.4rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.perf-header .page-title { margin-bottom: 0.25rem; }
+
+.perf-header .page-subtitle { margin-bottom: 0; }
+
+.perf-header .month-badge { padding: 0.55rem 0.95rem; }
+
+.month-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: var(--bg-card);
+}
+
+.perf-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+.perf-kpi-grid .kpi-card { gap: 0.45rem; }
+.perf-kpi-grid .badge { margin-bottom: 0.25rem; }
+.perf-kpi-grid .kpi-value { font-size: 1.8rem; }
+
+.perf-main-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.perf-balance-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+}
+.perf-balance-item { display: flex; flex-direction: column; gap: 0.25rem; }
+.perf-balance-label { font-size: 0.62rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); }
+.perf-balance-value { font-family: var(--font-body); font-size: 1.3rem; font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; color: var(--text-primary); }
+
+
+.perf-achievement { display: flex; flex-direction: column; }
+
+.perf-achievement-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.6rem;
+}
+.perf-achievement-head h3 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-on-dark);
+}
+
+.perf-achievement-score {
+  font-family: var(--font-body);
+  font-size: 2.4rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+  color: var(--gold);
+  line-height: 1;
+  white-space: nowrap;
+}
+.perf-achievement-score small {
+  font-size: 0.55em;
+  font-weight: 600;
+  color: rgba(248, 246, 241, 0.55);
+  margin-left: 2px;
+}
+
+.perf-achievement-copy {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: rgba(248, 246, 241, 0.7);
+  margin-top: 0.3rem;
+  margin-bottom: 1.25rem;
+}
+
+.perf-achievement-list { display: flex; flex-direction: column; }
+.perf-achievement-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(248,246,241,0.12);
+}
+.perf-achievement-row:last-child { border-bottom: none; }
+
+.perf-achv-metric {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(248,246,241,0.85);
+}
+.perf-achv-ic {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.perf-achv-val {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  font-size: 1.05rem;
+  color: var(--text-on-dark);
+  white-space: nowrap;
+}
+.perf-achv-val small {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: rgba(248, 246, 241, 0.55);
+  margin-left: 2px;
+}
+
+@media (max-width: 900px) {
+  .perf-main-grid { grid-template-columns: 1fr; }
+  .perf-kpi-grid { grid-template-columns: 1fr; }
+  .perf-balance-row { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) { }
